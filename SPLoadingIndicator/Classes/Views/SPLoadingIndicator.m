@@ -13,7 +13,7 @@ const CGFloat SPLoadingIndicatorCornerRadiusRatio = 8;
 
 // How smaller the circle's width is compared to the rounded view width
 const CGFloat SPLoadingIndicatorCircleWidthRatio = 2;
-const CGFloat SPCircleViewCircleWidth = 1.0f;
+const CGFloat SPCircleViewCircleWidth = 0.7f;
 
 @interface SPLoadingIndicator ()
 
@@ -106,7 +106,7 @@ IB_DESIGNABLE
     self.outerCircleLayer = [CAShapeLayer layer];
     self.outerCircleLayer.lineWidth = SPCircleViewCircleWidth;
     self.outerCircleLayer.fillColor = [UIColor clearColor].CGColor;
-    self.outerCircleLayer.strokeColor = [UIColor whiteColor].CGColor;
+    self.outerCircleLayer.strokeColor = [UIColor colorWithWhite:1.0f alpha:0.5f].CGColor;
 
 
     CABasicAnimation *animation = [self setupRotationAnimation];
